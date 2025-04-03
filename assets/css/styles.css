@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: rgb(19, 9, 112);
+}
+
+img {
+    border-radius: 1em;
+}
+
+.agbalumo-regular {
+    font-family: "Agbalumo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+h1, h2{
+    font-family: "Agbalumo", system-ui;
+}
+
+header {
+    font-family: "Agbalumo", system-ui;
+    color: rgb(255, 255, 255);
+}
+
+header, footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 5em;
+    background-color: rgb(241, 97, 133);
+}
+
+footer {
+    height: 100px;
+}
+
+li{
+    list-style-type: none;
+}
+
+header ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+header .logo_container img{
+    width:120px;
+}
+
+.hero{
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 194, 194);
+    font-size: 30px;
+}
+
+.recetas_grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+}
+
+.boxed{
+    max-width: 1200px;
+    margin: 0 auto;;
+}
+
+.receta{
+    grid-column: span 3;
+    background-color: #ff9a9a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.receta img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.receta a {
+    border: solid;
+    padding: 0.5em 1.5em;
+    border-radius: 2em;
+    text-decoration: none;
+    color: #5d163c;
+    background-color: #ffffff;
+    margin: 0.8em 0em;
+    font-family: math;
+}
+
+.receta h3 {
+    margin: 0.8em 0em 0em 0em;
+    font-family: math;
+}
+
+.recetas {
+    padding: 20px;
+    background: url("https://img.freepik.com/premium-vector/seamless-polka-dot-pattern-vector-repeating-texture-polka-dot-with-color-pastel-background-pink-polka-dot-pattern-pink-polka-wrapping-texture-vector-illustration_561158-1507.jpg?w=360");
+    background-repeat: repeat;
+}
+
+.receta-detalle {
+    font-size: 1.03em;
+    margin: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.receta-detalle img {
+    width: 25em;
+}
+
+.receta-detalle div {
+    margin: 0.7em 0em;
+}
+
+.left-right {
+    display: flex;
+    width: 90%;
+}
+
+.left {
+    float: left;
+    width: 100%;
+}
+
+.right {
+    float: right;
+    margin: 0em 2em;
+    width: 150%;
+}
+
+#detalles {
+    background-color: #ffd6d6;
+    padding: 1.2em 2em;
+    border-radius: 1em;
+    margin: 0em;
+}
+
+.list-type5{
+    width:80%;
+    padding: 0.5em 0em;
+    }
+    .list-type5 ol {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 1em;
+    padding: 0;
+    counter-reset: li-counter;
+    }
+    .list-type5 ol li{
+    position: relative;
+    margin-bottom: 1.5em;
+    padding: 0.5em;
+    background-color: #ffa4a4;
+    padding-left: 58px;
+    border-radius: 0.5em;
+    }
+    
+    .list-type5 a{
+    text-decoration:none;
+    color:black;
+    font-size:15px;
+    font-family: 'Raleway', sans-serif;
+    }
+    
+    .list-type5 li:hover{
+    box-shadow:inset -1em 0 #ff5672;
+    -webkit-transition: box-shadow 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: box-shadow 0.5s;
+    }
+    
+    .list-type5 ol li:before {
+    position: absolute;
+    top: -0.3em;
+    left: -0.5em;
+    width: 1.8em;
+    height: 1.2em;
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #f83861;
+    transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    z-index: 99;
+    overflow: hidden;
+    content: counter(li-counter);
+    counter-increment: li-counter;
+    border-radius: 0.2em;
+    }
