@@ -1,209 +1,144 @@
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 a {
     color: rgb(19, 9, 112);
+    text-decoration: none;
+    font-family: "Agbalumo", system-ui;
+    padding: 0.5em;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 0.5em;
+}
+
+a:hover {
+    text-decoration:underline;
+    background-color: #ff9faf;
+    color: rgb(255, 255, 255);
+    
 }
 
 img {
     border-radius: 1em;
+    max-width: 100%;
+    display: block;
 }
 
-.agbalumo-regular {
-    font-family: "Agbalumo", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }  
-
-h1, h2{
-    font-family: "Agbalumo", system-ui;
-}
-
+.agbalumo-regular,
+h1, h2,
 header {
     font-family: "Agbalumo", system-ui;
-    color: rgb(255, 255, 255);
 }
 
-header, footer{
+h3, p, li {
+    font-family: 'Raleway', sans-serif;
+}
+
+header, footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 0px 5em;
+    padding: 1em 5em;
     background-color: rgb(241, 97, 133);
+    color: white;
+    justify-content: space-around;
 }
 
 footer {
     height: 100px;
 }
 
-li{
-    list-style-type: none;
-}
-
-header ul{
+header ul {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
     gap: 30px;
+    list-style: none;
 }
 
-header .logo_container img{
-    width:120px;
+header .logo_container img {
+    width: 120px;
 }
 
-.hero{
+.hero {
     height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 194, 194);
-    font-size: 30px;
-}
-
-.recetas_grid{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    gap: 20px;
-}
-
-.boxed{
-    max-width: 1200px;
-    margin: 0 auto;;
-}
-
-.receta{
-    grid-column: span 3;
-    background-color: #ff9a9a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    border-radius: 10px;
-    padding: 10px;
-    justify-content: space-around;
-}
-
-.receta img{
-    width: 100%;
-    border-radius: 10px;
-}
-
-.receta a {
-    border: solid;
-    padding: 0.5em 1.5em;
-    border-radius: 2em;
-    text-decoration: none;
-    color: #5d163c;
-    background-color: #ffffff;
-    margin: 0.8em 0em;
-    font-family: math;
-}
-
-.receta h3 {
-    margin: 0.8em 0em 0em 0em;
-    font-family: math;
+    font-size: 2rem;
 }
 
 .recetas {
-    padding: 20px;
+    padding: 40px 20px;
     background: url("https://img.freepik.com/premium-vector/seamless-polka-dot-pattern-vector-repeating-texture-polka-dot-with-color-pastel-background-pink-polka-dot-pattern-pink-polka-wrapping-texture-vector-illustration_561158-1507.jpg?w=360");
     background-repeat: repeat;
-}
-
-.receta-detalle {
-    font-size: 1.03em;
-    margin: 3em;
+    gap: 1em;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.receta-detalle img {
-    width: 25em;
+.boxed {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.receta-detalle div {
-    margin: 0.7em 0em;
+.recetas_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.left-right {
-    display: flex;
-    width: 90%;
-}
-
-.left {
-    float: left;
-    width: 100%;
-}
-
-.right {
-    float: right;
-    margin: 0em 2em;
-    width: 150%;
-}
-
-#detalles {
-    background-color: #ffd6d6;
-    padding: 1.2em 2em;
-    border-radius: 1em;
-    margin: 0em;
-}
-
-.list-type5{
-    width:80%;
-    padding: 0.5em 0em;
-    }
-    .list-type5 ol {
-    list-style-type: none;
-    margin: 0;
-    margin-left: 1em;
-    padding: 0;
-    counter-reset: li-counter;
-    }
-    .list-type5 ol li{
-    position: relative;
-    margin-bottom: 1.5em;
-    padding: 0.5em;
-    background-color: #ffa4a4;
-    padding-left: 58px;
-    border-radius: 0.5em;
-    }
-    
-    .list-type5 a{
-    text-decoration:none;
-    color:black;
-    font-size:15px;
-    font-family: 'Raleway', sans-serif;
-    }
-    
-    .list-type5 li:hover{
-    box-shadow:inset -1em 0 #ff5672;
-    -webkit-transition: box-shadow 0.5s; /* For Safari 3.1 to 6.0 */
-    transition: box-shadow 0.5s;
-    }
-    
-    .list-type5 ol li:before {
-    position: absolute;
-    top: -0.3em;
-    left: -0.5em;
-    width: 1.8em;
-    height: 1.2em;
-    font-size: 2em;
-    line-height: 1.2;
-    font-weight: bold;
+.receta {
+    background-color: #ff9a9a;
+    border-radius: 10px;
+    padding: 1em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(233, 54, 164, 0.2);
+}
+
+.receta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.receta img {
+    border-radius: 10px;
+    margin-bottom: 0.5em;
+}
+
+.receta h3 {
+    margin-top: 0.5em;
+}
+
+.receta a {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.6em 1.5em;
+    border-radius: 2em;
+    background-color: white;
+    color: #5d163c;
+    border: 2px solid #5d163c;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.receta a:hover {
+    background-color: #5d163c;
     color: white;
-    background-color: #f83861;
-    transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    -webkit-transform: rotate(-20deg);
-    z-index: 99;
-    overflow: hidden;
-    content: counter(li-counter);
-    counter-increment: li-counter;
-    border-radius: 0.2em;
+}
+
+@media screen and (max-width: 768px) {
+    header, footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 1em;
     }
+
+    .receta-detalle {
+        margin: 2em 1em;
+    }
+}

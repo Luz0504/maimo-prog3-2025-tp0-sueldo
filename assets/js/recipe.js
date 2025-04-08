@@ -10,19 +10,10 @@ const main = async () => {
 
     recetasId.innerHTML =
         `<div class='receta-detalle'>
-            <div class='left-right'>
-                <div class='left'>
+            <div class='up-down'>
+                <div class='up'>
                     <img src='${recipesData.image}' alt='${recipesData.name}'>
 
-                    <div>
-                        <h3>Ingredientes:</h3>
-                        <div class='list-type5'>
-                            <ol>${recipesData.ingredients.map(ingrediente => `<li>${ingrediente}</li>`).join('')}</ol>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='right'>
                     <div id='detalles'>
                         <h1>${recipesData.name}</h1>
                         <p>Dificultad: ${recipesData.difficulty}</p>
@@ -43,14 +34,27 @@ const main = async () => {
                             <ul>${recipesData.mealType.map(meal => `<li>${meal}</li>`).join('')}</ul>
                         </div>
                     </div>
-                    <div>
-                        <h3>Instrucciones:</h3>
-                        <p>${recipesData.instructions}</p>
+                </div>
+
+                <div class='down'>
+                
+                    <div id='list'>
+                        <h3>Ingredientes:</h3>
+                        <div class='list-type5'>
+                            <ol>${recipesData.ingredients.map(ingrediente => `<li>${ingrediente}</li>`).join('')}</ol>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Valoraciones:</h3>
-                        <p>Rating:${recipesData.rating}</p>
-                        <p>Reseñas: ${recipesData.reviewCount}</p>
+
+                    <div id='otros-detalles'>
+                        <div>
+                            <h3>Instrucciones:</h3>
+                            <ol>${recipesData.instructions.map(instruction => `<li>${instruction}</li>`).join('')}</ol>
+                        </div>
+                        <div>
+                            <h3>Valoraciones:</h3>
+                            <p>Rating:${recipesData.rating}</p>
+                            <p>Reseñas: ${recipesData.reviewCount}</p>
+                        </div>
                     </div>
                 </div>
             <div>
